@@ -1,14 +1,23 @@
 package task2;
 
-public class Dogi {
+import task1.Animal;
+
+public class Dogi extends Animal {
     private Dogi(){
-
     }
 
-    public static void eat(){
-        System.out.println("Nice eat");
+
+    @Override
+    public void voice() {
+        System.out.println("Gav");
     }
-    public static void voice(){
-        System.out.println("Gay");
+
+    @Override
+    public void eat(String food) {
+        System.out.println("nice " + food);
+    }
+
+    public static Dogi zozo(){
+        return new Dogi();
     }
 }
